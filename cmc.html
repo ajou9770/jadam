@@ -135,10 +135,22 @@
 </div>
 <!-- Customer Center Button -->
 <div class="customer-center-button">
-  <a href="tel:01054740512">
+  <a href="javascript:void(0);" onclick="confirmCall();">
       <img src="img/callimg.jpg" alt="문의">
   </a>
 </div>
+
+<script>
+  function confirmCall() {
+      // confirm 창을 띄워서 사용자 확인
+      const userConfirmed = confirm("고객센터로 연결할까요?");
+      if (userConfirmed) {
+          // 사용자가 확인을 누르면 전화 연결
+          window.location.href = "tel:01054740512";
+      }
+  }
+</script>
+
 
 <script>
 
